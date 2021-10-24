@@ -1,0 +1,51 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista telefonica</title>
+
+</head>
+
+<form>
+<h2>Lista telefonica</h2>
+<fieldset>
+  <input type='text' id='nome' placeholder="Nome">
+  <input type='text' id='telefone' placeholder="telefone">
+  <input type='button' id='adicionar' value='adicionar'>
+  <input type='button' id='Remover' value='remover'>
+</form>
+</form>
+
+<p id='mostrar'></p>
+<script>
+var contato = document.getElementById('nome');
+var tel = document.getElementById('telefone');
+
+    var paragrafo = document.getElementById('mostrar');
+
+    document.getElementById('adicionar').addEventListener('click', function() {
+
+      localStorage.nome = contato.value;
+      localStorage.telefone = tel.value;
+
+
+      mostrar.innerText += localStorage.nome
+      mostrar.innerText += localStorage.telefone;
+	  
+ 
+
+    });
+
+function remove() {
+  localStorage.setItem('nome', 'simone');
+  localStorage.setItem('telefone', '72453453345');
+  
+window.localStorage.removeItem('name');
+
+window.localStorage.removeItem('telefone');
+}
+</script>
+</fieldset>
+</html>
